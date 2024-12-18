@@ -1,0 +1,29 @@
+SELECT video_id,categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title , 'BR' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_BR`
+UNION ALL
+SELECT video_id,categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date,channelTitle, title , 'GB' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_GB`
+UNION ALL
+SELECT video_id,categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title , 'IN' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_IN`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date,  channelTitle, title , 'JP' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_JP`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date,  channelTitle, title , 'KR' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_KR`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date,  channelTitle, title , 'MX' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_MX`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title , 'RU' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_RU`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title , 'US' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_US`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title  , 'CA' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_CA`
+UNION ALL
+SELECT video_id, categoryId_string, publishedAt, view_count, likes, comment_count, thumbnail_link, comments_disabled, trending_date, channelTitle, title  , 'FR' AS pays
+FROM `youtube-project-444210.Database.Trending_video_2024_FR`

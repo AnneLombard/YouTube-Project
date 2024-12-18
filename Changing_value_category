@@ -1,0 +1,51 @@
+SELECT DISTINCT category_id, COUNT(*)
+FROM `youtube-project-444210.Database.Trending_video_2017_2019`
+GROUP BY category_id
+ORDER BY category_id;
+
+SELECT column_name, data_type
+FROM `youtube-project-444210.Database.INFORMATION_SCHEMA.COLUMNS`
+WHERE table_name = 'youtube-project-444210.Database.Trending_video_2017_2019';
+
+ALTER TABLE `youtube-project-444210.Database.Trending_video_2017_2019`
+ADD COLUMN categoryId_string STRING;
+
+UPDATE `youtube-project-444210.Database.Trending_video_2017_2019`
+SET categoryId_string = CASE 
+      WHEN CAST(category_id AS STRING) = "1" THEN 'Film & Animation'
+    WHEN CAST(category_id AS STRING) = "2" THEN 'Autos & Vehicles'
+    WHEN CAST(category_id AS STRING) = "10" THEN 'Music'
+    WHEN CAST(category_id AS STRING) = "15" THEN 'Pets & Animals'
+    WHEN CAST(category_id AS STRING) = "17" THEN 'Sports'
+    WHEN CAST(category_id AS STRING) = "18" THEN 'Short Movies'
+    WHEN CAST(category_id AS STRING) = "19" THEN 'Travel & Events'
+    WHEN CAST(category_id AS STRING) = "20" THEN 'Gaming'
+    WHEN CAST(category_id AS STRING) = "21" THEN 'Videoblogging'
+    WHEN CAST(category_id AS STRING) = "22" THEN 'People & Blogs'
+    WHEN CAST(category_id AS STRING) = "23" THEN 'Comedy'
+    WHEN CAST(category_id AS STRING) = "24" THEN 'Entertainment'
+    WHEN CAST(category_id AS STRING) = "25" THEN 'News & Politics'
+    WHEN CAST(category_id AS STRING) = "26" THEN 'Howto & Style'
+    WHEN CAST(category_id AS STRING) = "27" THEN 'Education'
+    WHEN CAST(category_id AS STRING) = "28" THEN 'Science & Technology'
+    WHEN CAST(category_id AS STRING) = "29" THEN 'Nonprofits & Activism'
+    WHEN CAST(category_id AS STRING) = "30" THEN 'Movies'
+    WHEN CAST(category_id AS STRING) = "31" THEN 'Anime/Animation'
+    WHEN CAST(category_id AS STRING) = "32" THEN 'Action/Adventure'
+    WHEN CAST(category_id AS STRING) = "33" THEN 'Classics'
+    WHEN CAST(category_id AS STRING) = "34" THEN 'Comedy'
+    WHEN CAST(category_id AS STRING) = "35" THEN 'Documentary'
+    WHEN CAST(category_id AS STRING) = "36" THEN 'Drama'
+    WHEN CAST(category_id AS STRING) = "37" THEN 'Family'
+    WHEN CAST(category_id AS STRING) = "38" THEN 'Foreign'
+    WHEN CAST(category_id AS STRING) = "39" THEN 'Horror'
+    WHEN CAST(category_id AS STRING) = "40" THEN 'Sci-Fi/Fantasy'
+    WHEN CAST(category_id AS STRING) = "41" THEN 'Thriller'
+    WHEN CAST(category_id AS STRING) = "42" THEN 'Shorts'
+    WHEN CAST(category_id AS STRING) = "43" THEN 'Shows'
+    ELSE 'Unknown'
+END
+WHERE category_id IS not null;
+
+select *
+from `youtube-project-444210.Database.Trending_video_2017_2019`;
